@@ -1,0 +1,331 @@
+/* Dashboard Page Styles — Clean Developer Portal */
+
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dashboard-welcome-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  position: relative;
+}
+
+.welcome-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 580px;
+}
+
+.welcome-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.welcome-heading {
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.welcome-desc {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.profile-completion-bar-wrap {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-width: 300px;
+}
+
+.completion-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.completion-pct {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.welcome-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.readiness-gauge-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.gauge-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: conic-gradient(var(--primary) 0% 78%, rgba(255, 255, 255, 0.08) 78% 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.gauge-circle::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  background: var(--bg-card);
+  border-radius: 50%;
+}
+
+.gauge-number {
+  position: relative;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.gauge-sub {
+  position: relative;
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.gauge-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.gauge-status {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.gauge-caption {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .dashboard-welcome-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+}
+
+/* Stats Cards */
+.stat-card-link {
+  text-decoration: none;
+  display: block;
+}
+
+.stat-max {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.icon-purple { background: rgba(99, 102, 241, 0.1); color: #818cf8; }
+.icon-teal { background: rgba(2, 132, 199, 0.1); color: #38bdf8; }
+.icon-blue { background: rgba(59, 130, 246, 0.1); color: #60a5fa; }
+.icon-amber { background: rgba(245, 158, 11, 0.1); color: #fbbf24; }
+
+/* Dashboard Main Grid */
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  font-size: 0.775rem;
+  color: var(--text-secondary);
+}
+
+.radar-scoring-formula {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  overflow-x: auto;
+}
+
+.radar-scoring-formula code {
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+/* Action Items List */
+.actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.85rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.action-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+[data-theme='light'] .action-item:hover {
+  background: #f8fafc;
+}
+
+.action-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.action-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+}
+
+.action-title {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.action-desc {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+
+.action-arrow {
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.action-item:hover .action-arrow {
+  color: var(--primary);
+  transform: translateX(2px);
+}
+
+/* Jobs Preview Grid */
+.jobs-preview-grid {
+  margin-top: 0.85rem;
+}
+
+.job-preview-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.job-preview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.job-preview-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.job-preview-company {
+  font-size: 0.775rem;
+  color: var(--text-secondary);
+}
+
+.job-preview-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.skill-mini-tag {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.45rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+}
+
+.job-preview-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 0.45rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.job-preview-salary {
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--accent-emerald);
+}

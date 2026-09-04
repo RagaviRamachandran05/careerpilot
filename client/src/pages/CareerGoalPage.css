@@ -1,0 +1,132 @@
+/* Career Goal Page Styles — Clean Developer Career Preferences */
+
+.career-goal-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.current-goal-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.goal-banner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: 550px;
+}
+
+.goal-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.current-role-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.current-role-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.goal-banner-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.goal-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.goal-stat-val {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.goal-stat-lbl {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Roles Grid */
+.roles-grid {
+  margin-top: 0.85rem;
+}
+
+.role-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.25rem;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  background: var(--bg-card);
+}
+
+.role-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.role-card.selected {
+  background: rgba(99, 102, 241, 0.08);
+  border-color: var(--primary);
+}
+
+.role-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.role-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.role-card-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  flex: 1;
+}
+
+.role-card-action {
+  margin-top: auto;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.select-action-text {
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--primary);
+}
